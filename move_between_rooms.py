@@ -10,7 +10,7 @@ while True:
     direction = input("Enter a direction or exit: ").lower()
 
     if direction == "exit":
-        print("You did great!")
+        current_room = "exit"
         break
     elif direction in rooms[current_room]:
         current_room = rooms[current_room][direction]

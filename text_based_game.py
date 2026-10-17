@@ -37,6 +37,34 @@ def main():
 
     if command.startswith("go "):
       direction = command[3:]
+      if direction in rooms[current_room]:
+        current_room = rooms[current_room][direction]
+      else:
+        print("Do not go there.")
+
+    elif command.startswith("obtain "):'
+    item = command[7:]
+    if "item" in rooms[current_room] and item == rooms[current_room]["item"].lower():
+      inventory.append(rooms[current_room]["item"])
+      # Delete the gathered item from the room.
+      del rooms[current_room]["item"]
+      print("Item collected and added to bag!"]
+    else:
+      print("That item is not here in this room.")
+
+    elif command == "exit":
+      print("Come play again sometime!")
+      break
+
+    else:
+      print("That is not a valid command. You need to try again.")
+
+
+  if __name__ == "__main__":
+    main()
+    
+      
+    
   
   
   

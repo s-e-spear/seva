@@ -27,6 +27,10 @@ def main():
   show_instructions()
   
     while True:
+    if current_room == "Research Lab":
+      if len(inventory) == 7:
+        print("YAY! You gathered all 7 items and defeated the Mega Zombie! Great job surviving!")
+        break
     print("You are in the", current_room)
     print("Inventory:", inventory)
 
